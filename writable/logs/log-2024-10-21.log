@@ -1,0 +1,351 @@
+CRITICAL - 2024-10-21 14:35:17 --> CodeIgniter\Router\Exceptions\RouterException: The route for "inventory" cannot be found.
+[Method: GET, Route: /]
+in SYSTEMPATH\Helpers\url_helper.php on line 494.
+ 1 SYSTEMPATH\Helpers\url_helper.php(494): CodeIgniter\Router\Exceptions\RouterException::forInvalidRoute('inventory')
+ 2 APPPATH\Views\header.php(120): url_to('inventory')
+ 3 FCPATH\vendor\codeigniter4\framework\system\View\View.php(234): include('C:\\xampp\\htdocs\\crud\\app\\Views\\header.php')
+ 4 FCPATH\vendor\codeigniter4\framework\system\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('header', [], true)
+ 6 APPPATH\Views\welcome_message.php(2): view('header', [...])
+ 7 FCPATH\vendor\codeigniter4\framework\system\View\View.php(234): include('C:\\xampp\\htdocs\\crud\\app\\Views\\welcome_message.php')
+ 8 FCPATH\vendor\codeigniter4\framework\system\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+10 APPPATH\Controllers\Home.php(18): view('welcome_message')
+11 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+12 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:35:33 --> CodeIgniter\Router\Exceptions\RouterException: The route for "inventory" cannot be found.
+[Method: GET, Route: /]
+in SYSTEMPATH\Helpers\url_helper.php on line 494.
+ 1 SYSTEMPATH\Helpers\url_helper.php(494): CodeIgniter\Router\Exceptions\RouterException::forInvalidRoute('inventory')
+ 2 APPPATH\Views\header.php(120): url_to('inventory')
+ 3 FCPATH\vendor\codeigniter4\framework\system\View\View.php(234): include('C:\\xampp\\htdocs\\crud\\app\\Views\\header.php')
+ 4 FCPATH\vendor\codeigniter4\framework\system\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('header', [], true)
+ 6 APPPATH\Views\welcome_message.php(2): view('header', [...])
+ 7 FCPATH\vendor\codeigniter4\framework\system\View\View.php(234): include('C:\\xampp\\htdocs\\crud\\app\\Views\\welcome_message.php')
+ 8 FCPATH\vendor\codeigniter4\framework\system\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+10 APPPATH\Controllers\Home.php(18): view('welcome_message')
+11 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+12 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-21 14:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-21 14:36:22 --> CodeIgniter\Router\Exceptions\RouterException: The route for "inventory" cannot be found.
+[Method: GET, Route: /]
+in SYSTEMPATH\Helpers\url_helper.php on line 494.
+ 1 SYSTEMPATH\Helpers\url_helper.php(494): CodeIgniter\Router\Exceptions\RouterException::forInvalidRoute('inventory')
+ 2 APPPATH\Views\header.php(120): url_to('inventory')
+ 3 FCPATH\vendor\codeigniter4\framework\system\View\View.php(234): include('C:\\xampp\\htdocs\\crud\\app\\Views\\header.php')
+ 4 FCPATH\vendor\codeigniter4\framework\system\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('header', [], true)
+ 6 APPPATH\Views\welcome_message.php(2): view('header', [...])
+ 7 FCPATH\vendor\codeigniter4\framework\system\View\View.php(234): include('C:\\xampp\\htdocs\\crud\\app\\Views\\welcome_message.php')
+ 8 FCPATH\vendor\codeigniter4\framework\system\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+10 APPPATH\Controllers\Home.php(18): view('welcome_message')
+11 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+12 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+13 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:38:46 --> CodeIgniter\Filters\Exceptions\FilterException: "login" filter must have a matching alias defined.
+[Method: CLI, Route: routes]
+in VENDORPATH\codeigniter4\framework\system\Filters\Filters.php on line 495.
+ 1 VENDORPATH\codeigniter4\framework\system\Filters\Filters.php(495): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('login')
+ 2 VENDORPATH\codeigniter4\framework\system\Filters\Filters.php(547): CodeIgniter\Filters\Filters->enableFilter('login', 'before')
+ 3 VENDORPATH\codeigniter4\framework\system\Commands\Utilities\Routes\FilterFinder.php(59): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 VENDORPATH\codeigniter4\framework\system\Commands\Utilities\Routes\FilterCollector.php(79): CodeIgniter\Commands\Utilities\Routes\FilterFinder->find('inventory/inventory')
+ 5 VENDORPATH\codeigniter4\framework\system\Commands\Utilities\Routes.php(113): CodeIgniter\Commands\Utilities\Routes\FilterCollector->get('GET', 'inventory/inventory')
+ 6 VENDORPATH\codeigniter4\framework\system\CLI\Commands.php(70): CodeIgniter\Commands\Utilities\Routes->run([])
+ 7 VENDORPATH\codeigniter4\framework\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('routes', [])
+ 8 SYSTEMPATH\Boot.php(351): CodeIgniter\CLI\Console->run()
+ 9 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+10 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+INFO - 2024-10-21 14:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 14:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 14:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 14:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-21 14:44:04 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: inventory]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('inventory', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-21 14:44:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 14:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-21 14:44:15 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: inventory]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('inventory', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:44:17 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: inventory]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('inventory', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:46:57 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: inventory]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('inventory', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-21 14:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 14:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-10-21 14:47:01 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: inventory]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('inventory', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:52:13 --> CodeIgniter\Filters\Exceptions\FilterException: "Auth" filter must have a matching alias defined.
+[Method: GET, Route: inventory]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 778.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(778): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('Auth')
+ 2 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(406): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(181): CodeIgniter\Filters\Filters->initialize('inventory')
+ 4 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('inventory', 'before')
+ 5 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:52:14 --> CodeIgniter\Filters\Exceptions\FilterException: "Auth" filter must have a matching alias defined.
+[Method: GET, Route: inventory]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 778.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(778): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('Auth')
+ 2 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(406): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(181): CodeIgniter\Filters\Filters->initialize('inventory')
+ 4 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('inventory', 'before')
+ 5 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:52:29 --> CodeIgniter\Filters\Exceptions\FilterException: "Auth" filter must have a matching alias defined.
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 778.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(778): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('Auth')
+ 2 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(406): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(181): CodeIgniter\Filters\Filters->initialize('')
+ 4 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:52:33 --> CodeIgniter\Filters\Exceptions\FilterException: "Auth" filter must have a matching alias defined.
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 778.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(778): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('Auth')
+ 2 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(406): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(181): CodeIgniter\Filters\Filters->initialize('')
+ 4 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:52:37 --> CodeIgniter\Filters\Exceptions\FilterException: "Auth" filter must have a matching alias defined.
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 778.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(778): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('Auth')
+ 2 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(406): CodeIgniter\Filters\Filters->processAliasesToClass('before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(181): CodeIgniter\Filters\Filters->initialize('')
+ 4 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:53:41 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:53:42 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:53:43 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:55:14 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:55:15 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:55:15 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:55:15 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-21 14:55:16 --> Error: Class "CodeIgniter\Shield\Filters\Auth" not found
+[Method: GET, Route: /]
+in FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php on line 197.
+ 1 FCPATH\vendor\codeigniter4\framework\system\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 FCPATH\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-10-21 15:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:12:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:16:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-10-21 15:24:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

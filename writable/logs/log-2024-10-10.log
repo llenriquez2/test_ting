@@ -1,0 +1,56 @@
+ERROR - 2024-10-10 06:38:47 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp\\htdocs...', 1762)
+#1 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\Email\Email.php(1762): mail('enriquezlucasle...', '=?UTF-8?Q?Your=...', 'This is a multi...', 'Date: Thu, 10 O...', '-f codeigniters...')
+#2 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp\htdocs\crud\vendor\codeigniter4\shield\src\Controllers\MagicLinkController.php(134): CodeIgniter\Email\Email->send(false)
+#5 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\MagicLinkController->loginAction()
+#6 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\MagicLinkController))
+#7 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2024-10-10 06:38:47 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2024-10-10 06:38:47 --> 
+ERROR - 2024-10-10 06:38:47 --> Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.<br><pre>Date: Thu, 10 Oct 2024 06:38:45 +0000
+From: &quot;crud app&quot; &lt;codeignitersmtpserver@gmail.com&gt;
+Return-Path: &lt;codeignitersmtpserver@gmail.com&gt;
+Reply-To: &lt;codeignitersmtpserver@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: codeignitersmtpserver@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;6707767557a136.37384003@gmail.com&gt;
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_6707767557a2c4.08602845&quot;
+</pre>
+ERROR - 2024-10-10 06:39:12 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\Email\Email.php:1762
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\xampp\\htdocs...', 1762)
+#1 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\Email\Email.php(1762): mail('enriquezlucasle...', '=?UTF-8?Q?Your=...', 'This is a multi...', 'Date: Thu, 10 O...', '-f codeigniters...')
+#2 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\Email\Email.php(1694): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\Email\Email.php(1589): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\xampp\htdocs\crud\vendor\codeigniter4\shield\src\Controllers\MagicLinkController.php(134): CodeIgniter\Email\Email->send(false)
+#5 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\CodeIgniter.php(933): CodeIgniter\Shield\Controllers\MagicLinkController->loginAction()
+#6 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\Shield\Controllers\MagicLinkController))
+#7 C:\xampp\htdocs\crud\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\crud\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2024-10-10 06:39:12 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2024-10-10 06:39:12 --> 
+ERROR - 2024-10-10 06:39:12 --> Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.<br><pre>Date: Thu, 10 Oct 2024 06:39:10 +0000
+From: &quot;crud app&quot; &lt;codeignitersmtpserver@gmail.com&gt;
+Return-Path: &lt;codeignitersmtpserver@gmail.com&gt;
+Reply-To: &lt;codeignitersmtpserver@gmail.com&gt;
+User-Agent: CodeIgniter
+X-Sender: codeignitersmtpserver@gmail.com
+X-Mailer: CodeIgniter
+X-Priority: 3 (Normal)
+Message-ID: &lt;6707768ecaf227.17102478@gmail.com&gt;
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=&quot;B_ALT_6707768ecaf4c2.73758932&quot;
+</pre>
