@@ -34,7 +34,7 @@ class InventoryModel extends Model
       
     public function insert_data($data, $username) {
 
-        $currentDateTime = date('Y-m-d H:i:s');
+        $currentDateTime = date('Y-m-d H:i');
         $username = session()->get('username'); 
         
         // For a new insertion, we only set the username and current timestamp
@@ -49,8 +49,24 @@ class InventoryModel extends Model
     }
 
 
+    // Log an action in the inventory_logs table
+       private function log_action($inventory_id, $action, $username) {
+            $db = \Config\Database::connect();
+            $builder = $db->table('inventory_logs');
+
+            $data = [
+                'inventory_id' => $inventory_id,
+                'action'       => $action,
+                'performed_by' => $username,
+                'timestamp'    => date('Y-m-d H:i')
+            ];
+
+            $builder->insert($data);
+        }
+
+
     public function update_data($id, $data, $username) {
-        $currentDateTime = date('Y-m-d H:i:s');
+        $currentDateTime = date('Y-m-d H:i');
         $username = session()->get('username'); 
 
         // Retrieve the existing value of `updated_by` from the database

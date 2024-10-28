@@ -4,8 +4,9 @@ namespace App\Controllers;
    
 use CodeIgniter\Controller;
 use App\Models\InventoryModel;
-use Dompdf\Dompdf;
-
+// use Dompdf\Dompdf;
+// require_once APPPATH . 'Libraries/fpdf/fpdf.php';
+require_once APPPATH . 'Libraries/FPDF186/fpdf.php';
    
 class Inventory extends Controller
 {
@@ -182,116 +183,224 @@ class Inventory extends Controller
 
     public function exportCSV()
     {
-    $filename = 'inventory_' . date('Ymd') . '.csv';
-    header("Content-Description: File Transfer");
-    header("Content-Disposition: attachment; filename=$filename");
-    header("Content-Type: application/csv; ");
+        $filename = 'inventory_' . date('Ymd') . '.csv';
+        header("Content-Description: File Transfer");
+        header("Content-Disposition: attachment; filename=$filename");
+        header("Content-Type: application/csv; ");
 
-    // Get inventory data
-    $inventoryModel = new \App\Models\InventoryModel();
-    $inventoryData = $inventoryModel->findAll();
-
-    // Open file in write mode
-    $file = fopen('php://output', 'w');
-
-    // Set CSV column headers
-    $header = array("ID", "Machine ID", "Machine Type", "Manufacturer", "Model Number", "Assigned Technician", "Date of Deployment", "Location/Department", "Status", "Service Due Date", "Condition", "Notes", "Updated By");
-    fputcsv($file, $header);
-
-    // Insert data into CSV
-    foreach ($inventoryData as $row) {
-        fputcsv($file, $row);
-    }
-
-    fclose($file);
-    exit;
-    }
-
-
-
-
-
-    public function exportPDF()
-    {
-        $dompdf = new Dompdf();
-        
         // Get inventory data
         $inventoryModel = new \App\Models\InventoryModel();
         $inventoryData = $inventoryModel->findAll();
 
-        // Build HTML content for the PDF
-        $html = '<h2 style="text-align: center;">Inventory List</h2>';
-        $html .= '<style>
-                    table {
-                        border-collapse: collapse;
-                        width: 100%;
-                        margin-bottom: 20px;
-                    }
-                    th, td {
-                        border: 1px solid #000;
-                        padding: 8px;
-                        text-align: left;
-                        font-size: 10px; /* Adjust font size as needed */
-                    }
-                    th {
-                        background-color: #f2f2f2; /* Light gray background for headers */
-                    }
-                    @media print {
-                        th {
-                            position: sticky;
-                            top: 0;
-                            z-index: 10;
-                        }
-                    }
-                </style>';
-        $html .= '<table>';
-        $html .= '<tr>
-                    <th>ID</th>
-                    <th>Machine ID</th>
-                    <th>Machine Type</th>
-                    <th>Manufacturer</th>
-                    <th>Model Number</th>
-                    <th>Assigned Technician</th>
-                    <th>Date of Deployment</th>
-                    <th>Location/Department</th>
-                    <th>Status</th>
-                    <th>Service Due Date</th>
-                    <th>Condition</th>
-                    <th>Notes</th>
-                    <th>Updated By</th>
-                </tr>';
-        
+        // Open file in write mode
+        $file = fopen('php://output', 'w');
+
+        // Set CSV column headers (all headers but select specific ones to export)
+        $header = array(
+            "ID", 
+            "Machine ID", 
+            "Machine Type", 
+            "Manufacturer", 
+            "Model Number", 
+            "Assigned Technician", 
+            "Date of Deployment", 
+            "Location/Department", 
+            "Status", 
+            "Service Due Date", 
+            "Condition", 
+            "Notes", 
+            "Updated By"
+        );
+        fputcsv($file, $header);
+
+        // Insert selected data into CSV (you can modify to include more or fewer columns)
         foreach ($inventoryData as $row) {
-
-            $updatedByContent = nl2br(htmlspecialchars($row['updated_by'])); // Convert new lines and escape HTML
-
-            $html .= '<tr>
-                        <td>' . $row['id'] . '</td>
-                        <td>' . $row['machine_id'] . '</td>
-                        <td>' . $row['machine_type'] . '</td>
-                        <td>' . $row['manufacturer'] . '</td>
-                        <td>' . $row['model_number'] . '</td>
-                        <td>' . $row['assigned_tech'] . '</td>
-                        <td>' . $row['date_of_deployment'] . '</td>
-                        <td>' . $row['location_department'] . '</td>
-                        <td>' . $row['status'] . '</td>
-                        <td>' . $row['service_due_date'] . '</td>
-                        <td>' . $row['condition'] . '</td>
-                        <td>' . $row['notes'] . '</td>
-                        <td>' . $updatedByContent . '</td> <!-- Updated by content with line breaks -->
-                    </tr>';
+            // Only add the columns you want to include in the CSV output
+            $selectedData = [
+                $row['id'],                      // ID
+                $row['machine_id'],              // Machine ID
+                $row['machine_type'],            // Machine Type
+                $row['manufacturer'],            // Manufacturer
+                $row['model_number'],            // Model Number
+                $row['assigned_tech'],           // Assigned Technician
+                $row['date_of_deployment'],      // Date of Deployment
+                $row['location_department'],     // Location/Department
+                $row['status'],                  // Status
+                $row['service_due_date'],        // Service Due Date
+                $row['condition'],               // Condition
+                $row['notes'],                   // Notes
+                $row['updated_by']               // Updated By
+            ];
+            fputcsv($file, $selectedData);
         }
-        
-        $html .= '</table>';
 
-        // Load HTML content into Dompdf and generate PDF
-        $dompdf->loadHtml($html);
-        $dompdf->setPaper('A4', 'landscape');
-        $dompdf->render();
-
-        // Output the generated PDF (downloadable)
-        $dompdf->stream("inventory_" . date('Ymd') . ".pdf", array("Attachment" => 1));
+        fclose($file);
         exit;
+    }
+
+
+
+
+
+
+    // public function exportPDF()
+    // {
+    //     $dompdf = new Dompdf();
+        
+    //     // Get inventory data
+    //     $inventoryModel = new \App\Models\InventoryModel();
+    //     $inventoryData = $inventoryModel->findAll();
+
+    //     // Build HTML content for the PDF
+    //     $html = '<h2 style="text-align: center;">Inventory List</h2>';
+    //     $html .= '<style>
+    //                 table {
+    //                     border-collapse: collapse;
+    //                     width: 100%;
+    //                     margin-bottom: 20px;
+    //                 }
+    //                 th, td {
+    //                     border: 1px solid #000;
+    //                     padding: 8px;
+    //                     text-align: left;
+    //                     font-size: 10px; /* Adjust font size as needed */
+    //                 }
+    //                 th {
+    //                     background-color: #f2f2f2; /* Light gray background for headers */
+    //                 }
+    //                 @media print {
+    //                     th {
+    //                         position: sticky;
+    //                         top: 0;
+    //                         z-index: 10;
+    //                     }
+    //                 }
+    //             </style>';
+    //     $html .= '<table>';
+    //     $html .= '<tr>
+    //                 <th>ID</th>
+    //                 <th>Machine ID</th>
+    //                 <th>Machine Type</th>
+    //                 <th>Manufacturer</th>
+    //                 <th>Model Number</th>
+    //                 <th>Assigned Technician</th>
+    //                 <th>Date of Deployment</th>
+    //                 <th>Location/Department</th>
+    //                 <th>Status</th>
+    //                 <th>Service Due Date</th>
+    //                 <th>Condition</th>
+    //                 <th>Notes</th>
+    //                 <th>Updated By</th>
+    //             </tr>';
+        
+    //     foreach ($inventoryData as $row) {
+
+    //         $updatedByContent = nl2br(htmlspecialchars($row['updated_by'])); // Convert new lines and escape HTML
+
+    //         $html .= '<tr>
+    //                     <td>' . $row['id'] . '</td>
+    //                     <td>' . $row['machine_id'] . '</td>
+    //                     <td>' . $row['machine_type'] . '</td>
+    //                     <td>' . $row['manufacturer'] . '</td>
+    //                     <td>' . $row['model_number'] . '</td>
+    //                     <td>' . $row['assigned_tech'] . '</td>
+    //                     <td>' . $row['date_of_deployment'] . '</td>
+    //                     <td>' . $row['location_department'] . '</td>
+    //                     <td>' . $row['status'] . '</td>
+    //                     <td>' . $row['service_due_date'] . '</td>
+    //                     <td>' . $row['condition'] . '</td>
+    //                     <td>' . $row['notes'] . '</td>
+    //                     <td>' . $updatedByContent . '</td> <!-- Updated by content with line breaks -->
+    //                 </tr>';
+    //     }
+        
+    //     $html .= '</table>';
+
+    //     // Load HTML content into Dompdf and generate PDF
+    //     $dompdf->loadHtml($html);
+    //     $dompdf->setPaper('A4', 'landscape');
+    //     $dompdf->render();
+
+    //     // Output the generated PDF (downloadable)
+    //     $dompdf->stream("inventory_" . date('Ymd') . ".pdf", array("Attachment" => 1));
+    //     exit;
+    // }
+
+
+
+    public function exportPDF($id)
+    {
+
+        // require_once APPPATH . 'Libraries/FPDF/fpdf186.php';
+
+        // Load the inventory model
+        $inventoryModel = new \App\Models\InventoryModel();
+        
+        // Fetch inventory data using $id
+        $data = $inventoryModel->find($id);
+        
+        // Check if the data exists
+        if (!$data) {
+            return $this->response->setStatusCode(404, 'Inventory item not found.');
+        }
+
+        // Initialize FPDF
+        $pdf = new \FPDF();
+        $pdf->AddPage();
+        
+        // Set the font for the PDF
+        $pdf->SetFont('Arial', 'B', 16);
+        
+        // Title of the PDF
+        $pdf->Cell(190, 10, 'Inventory Item Details', 0, 1, 'C');
+        
+        // Add some space
+        $pdf->Ln(10);
+        
+        // Display the data
+        $pdf->SetFont('Arial', '', 12);
+        $pdf->Cell(50, 10, 'Machine ID: ' . $data['machine_id'], 0, 1);
+        $pdf->Cell(50, 10, 'Machine Type: ' . $data['machine_type'], 0, 1);
+        $pdf->Cell(50, 10, 'Manufacturer: ' . $data['manufacturer'], 0, 1);
+        $pdf->Cell(50, 10, 'Model Number: ' . $data['model_number'], 0, 1);
+        $pdf->Cell(50, 10, 'Assigned Tech: ' . $data['assigned_tech'], 0, 1);
+        $pdf->Cell(50, 10, 'Date of Deployment: ' . $data['date_of_deployment'], 0, 1);
+        $pdf->Cell(50, 10, 'Location/Department: ' . $data['location_department'], 0, 1);
+        $pdf->Cell(50, 10, 'Status: ' . $data['status'], 0, 1);
+        $pdf->Cell(50, 10, 'Service Due Date: ' . $data['service_due_date'], 0, 1);
+        $pdf->Cell(50, 10, 'Condition: ' . $data['condition'], 0, 1);
+        // $pdf->Cell(50, 10, 'Notes: ' . $data['notes'], 0, 1);
+        
+         // Wrap the "Notes" field using MultiCell
+        $pdf->Cell(50, 10, 'Notes:', 0, 1);
+        $pdf->MultiCell(0, 10, $data['notes'], 0, 'L');  // 0 for full width, 10 for height, and 'L' for left-align
+
+        // Output the generated PDF
+        // $this->response->setHeader('Content-Type', 'application/pdf');
+
+        // // Sanitize the machine_type for use in the filename
+        // $sanitizedMachineType = preg_replace('/[^A-Za-z0-9_\-]/', '_', $data['machine_type']); 
+
+        // // Output the generated PDF with the sanitized machine type in the filename
+        // $pdf->Output('I', 'Machine_Type_' . $sanitizedMachineType . '.pdf');  // Forces download
+
+        // exit;
+
+        // Output the generated PDF
+        $this->response->setHeader('Content-Type', 'application/pdf');
+
+        // Sanitize the machine_type for use in the filename
+        $sanitizedMachineType = preg_replace('/[^A-Za-z0-9_\-]/', '_', $data['machine_type']); 
+
+        // Set the Content-Disposition header for inline display and suggested filename
+        $this->response->setHeader('Content-Disposition', 'inline; filename="Machine_Type_' . $sanitizedMachineType . '.pdf"');
+
+        // Output the generated PDF to the browser
+        $pdf->Output('I');  // 'I' for inline viewing
+
+        exit;
+
+
     }
 
 

@@ -6,10 +6,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+
+
+
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+<script type="text/javascript" src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script> -->
 
 
 
@@ -36,6 +46,7 @@
 
          /* Remove background from the search input */
         .dataTables_filter input {
+          width: 300px;
           border: 2px solid black !important; 
           background-color: white !important;
           /* border: black !important; */
@@ -45,6 +56,8 @@
         .dataTables_filter label {
             color: white; /* Change text color to white */
         }
+
+       
 
         /* Remove background from the pagination buttons */
         .dataTables_paginate .paginate_button {
@@ -59,6 +72,21 @@
           box-shadow: none !important;
         }
 
+       
+        /* Center the dropdown button to the top center of the cell */
+        .dropdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to the top of the cell */
+            height: 100%;
+        }
+
+        .dropdown-menu {
+            top: 0; /* Position dropdown menu at the top */
+            transform: translateY(-100%); /* Adjust to display above the button */
+        }
+
+
         .dataTables_length label {
           color: white; /* Text color */
         }
@@ -67,12 +95,12 @@
           color: white !important;
         }
                 
-        #inventoryTable thead th {
-            /* text-align: center; */
+      
 
-            text-align: center !important; /* Force the centering */
-            vertical-align: middle !important; /* Ensure vertical centering */
-       
+        /* Center align headers */
+        #inventoryTable th {
+            text-align: center;
+            vertical-align: middle;
         }
 
 
@@ -89,6 +117,10 @@
         width: 100%; /* Set to 100% to ensure the table uses the full width */
         table-layout: fixed; /* Use fixed layout to respect column widths */
        
+        }
+
+        #inventoryTable td {
+            white-space: pre-wrap; /* Allows for line breaks to be rendered */
         }
 
        

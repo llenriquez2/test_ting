@@ -16,7 +16,7 @@
 
         <div class="col-lg-12 text-end">
                 <a href="<?= base_url('inventory/exportCSV'); ?>" class="btn btn-success">Export to CSV</a>
-                <a href="<?= site_url('inventory/exportPDF'); ?>" class="btn btn-danger">Export to PDF</a>
+                <!-- <a href="</?= base_url('inventory/exportPDF'); ?>" class="btn btn-danger">Export to PDF</a> -->
 
         </div>
         
@@ -29,6 +29,8 @@
         <table class="table table-bordered table-striped w-100" id="inventoryTable">
             <thead>
                 <tr>
+                    <th>Action</th>
+
                     <th>id</th>
                     <th>Machine ID</th>
                     <th>Machine Type</th>
@@ -44,7 +46,6 @@
                     <th>Notes</th>
                     <th>Updated by</th>
 
-                    <th>Action</th>
                 </tr>
             </thead>  
             <tbody>
@@ -52,6 +53,29 @@
             foreach($inventory_detail as $row){
             ?>
             <tr id="<?php echo $row['id']; ?>">
+                
+                <!-- <td>
+                <a data-id="</?php echo $row['id']; ?>" class="btn btn-primary btnEdit">Edit</a>
+                <a data-id="</?php echo $row['id']; ?>" class="btn btn-danger btnDelete">Delete</a>
+                <a data-id="</?php echo $row['id']; ?>" class="btn btn-warning exportPDF">Export to PDF</a>
+                </td> -->
+                
+                <td>
+                    <div class="dropdown-container">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a data-id="<?php echo $row['id']; ?>" class="dropdown-item btn btnEdit">Edit</a></li>
+                                <li><a data-id="<?php echo $row['id']; ?>" class="dropdown-item btn btnDelete">Delete</a></li>
+                                <li><a data-id="<?php echo $row['id']; ?>" class="dropdown-item btn exportPDF">Export to PDF</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </td>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['machine_id']; ?></td>
                 <td><?php echo $row['machine_type']; ?></td>
@@ -68,10 +92,7 @@
                 <td><?php echo $row['updated_by']; ?></td>
 
 
-                <td>
-                <a data-id="<?php echo $row['id']; ?>" class="btn btn-primary btnEdit">Edit</a>
-                <a data-id="<?php echo $row['id']; ?>" class="btn btn-danger btnDelete">Delete</a>
-                </td>
+               
             </tr>
             <?php
             }
