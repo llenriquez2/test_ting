@@ -5,6 +5,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+<script src= "public/js/particles.js"></script>
+<script src= "public/js/particles.min.js"></script>
+<script src= "public/js/app.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
 <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
@@ -25,19 +30,46 @@
 
 
     <style>
-        body {
-            background-image: url('http://localhost/crud/public/background1.jpg'); /* Path to your image */
-            background-size: contain; /* Ensures the image covers the entire body */
-            background-position: center;
-             /* Prevents the image from repeating */
-            height: 100vh; /* Full height of the viewport */
-            margin: 0; /* Remove default margin */
-        }
+       html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        position: relative; /* Ensure proper stacking context */
+      }
+
+      #particles-js {
+        position: fixed; /* Fix particles to the viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2; /* Keeps particles behind all other content */
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("http://localhost/crud/public/background1.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative; /* Ensure body content layers above particles */
+        z-index: 0; /* Ensure body content stays above particles */
+      
+      }
+
+      .content-container {
+        position: relative; /* Keeps your table content in front of the particles */
+        z-index: 1; /* Ensures table appears above the particles */
+      }
+
+
 
         .navbar {
           
-            background-color: transparent;
-
+            /* background-color: transparent; */
+            /* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)); */
+            /* background-color: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)); */
         }
 
         .table {
@@ -132,17 +164,22 @@
 </head>
 
 <!-- navbar-light bg-light -->
-<body>
+<div id="particles-js"></div>
+
+<body >
+
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="<?= url_to("/") ?>">Navbar</a> -->
+    <!-- <a class="navbar-brand" href="</?= url_to("/") ?>">Navbar</a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= url_to("/") ?>">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Features</a>
@@ -163,11 +200,11 @@
         
 
         <!-- Uncomment if you want to add admin group-based navigation -->
-        <!-- <?php if (auth()->user()->inGroup('admin')): ?>
+        <!-- </?php if (auth()->user()->inGroup('admin')): ?>
         <li class="nav-item">
-          <a class="nav-link" href="<?= url_to('admin') ?>">Admin Dashboard</a>
+          <a class="nav-link" href="</?= url_to('admin') ?>">Admin Dashboard</a>
         </li>
-        <?php endif; ?> -->
+        </?php endif; ?> -->
         <?php else: ?>
         <li class="nav-item">
           <a class="nav-link" href="<?= url_to('login') ?>">Login</a>
@@ -179,14 +216,15 @@
           
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              
-         Hello, <?= esc(auth()->user()->username) ?>
+             Hello, <?= esc(auth()->user()->username) ?>
              
           </a>
           <?php endif; ?>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            
+            <?php if (auth()->loggedIn()): ?>
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
-            <?php if (auth()->loggedIn()): ?>
             <li><a class="dropdown-item" href="<?= url_to('logout') ?>">Logout</a></li>
             <?php endif; ?>
           </ul>

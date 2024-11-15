@@ -71,3 +71,15 @@
     </div>
 
 <?= $this->endSection() ?>
+
+<?= $this->section('pageScripts') ?>
+    <!-- <script src="public/js/particles.js"></script>
+    <script src="public/js/particles.min.js"></script>
+    <script src="public/js/app.js"></script> -->
+
+
+    
+    <script src="<?= base_url('public/js/particles.js') ?>"></script>
+    <script src="<?= base_url('public/js/particles.min.js') ?>"></script>
+    <script src="<?= base_url('public/js/app.js') ?>"></script>
+<?= $this->endSection() ?>

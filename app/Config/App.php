@@ -135,7 +135,7 @@ class App extends BaseConfig
      */
     // public string $appTimezone = 'UTC';
 
-    public string $appTimezone = 'Asia/Manila';
+    public string $appTimezone = 'Asia/Manila'; //added by Leo Cris
 
     /**
      * --------------------------------------------------------------------------
