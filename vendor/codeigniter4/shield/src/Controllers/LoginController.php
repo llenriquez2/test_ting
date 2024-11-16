@@ -78,6 +78,9 @@ class LoginController extends BaseController
         // If the user is logged in, set the username in the session
             if (auth()->loggedIn()) {
                 session()->set('username', auth()->user()->username);  // Set the username in session
+                session()->set('last_name', auth()->user()->last_name);
+                session()->set('first_name', auth()->user()->first_name);
+
             }
             
         //Added by Leo Cris -  END

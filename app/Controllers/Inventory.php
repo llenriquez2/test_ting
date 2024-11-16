@@ -115,6 +115,7 @@ class Inventory extends Controller
          // Get the username from session
          $session = session();
          $username = $session->get('username');  
+        //  $lastname = $session->get('last_name');  
           
         $data = [
             
@@ -669,12 +670,14 @@ class Inventory extends Controller
     //     exit;
     // }
 
-    public function exportPDF($id, $ref_num, $username)
+    public function exportPDF($id, $ref_num, $fullname)
     {
         if (!auth()->loggedIn()) {
             return redirect()->to("login")
                             ->with("message", "Please login first");
         }
+
+     
     
         // Load the inventory model
         $inventoryModel = new \App\Models\InventoryModel();
@@ -749,9 +752,10 @@ class Inventory extends Controller
         $pdf->SetFont('Arial', 'B', 6);
         $pdf->Cell(95, 6, 'PREPARED BY', 1, 0, 'C');
         $pdf->Cell(95, 6, 'RELEASED BY', 1, 1, 'C');
+        
 
         $pdf->SetFont('Arial', '', 6);
-        $pdf->Cell(95, 6, $username.'                            10/02/2024', 1, 0, 'C');
+        $pdf->Cell(95, 6, $fullname.'                            10/02/2024', 1, 0, 'C');
         $pdf->Cell(95, 6, '', 1, 1, 'C');  // Empty cell for RELEASED BY
 
         $pdf->Cell(95, 6, '______________________________  ______', 1, 0, 'C');
@@ -767,10 +771,10 @@ class Inventory extends Controller
 
         $pdf->SetFont('Arial', '', 6);
         $pdf->Cell(95, 6, '', 1, 0, 'L');  // Empty cell for DELIVERED BY
-        $pdf->Cell(95, 6, 'RONALD ROSAS                            07/16/2024', 1, 1, 'C');
+        $pdf->Cell(95, 6, 'RONALD ROSAS                            07/16/2024',  1, 1, 'C');
 
-        $pdf->Cell(95, 6, '______________________________  ______', 1, 0, 'C');
-        $pdf->Cell(95, 6, '______________________________  ______', 1, 1, 'C');
+        $pdf->Cell(95, 6, '______________________________  ______',  1, 0, 'C');
+        $pdf->Cell(95, 6, '______________________________  ______',  1, 1, 'C');
         $pdf->Cell(95, 6, 'Signature Over Printed Name   Date', 1, 0, 'C');
         $pdf->Cell(95, 6, 'Signature Over Printed Name   Date', 1, 1, 'C');
 

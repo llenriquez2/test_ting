@@ -437,9 +437,12 @@ $('body').on('click', '.exportPDF', function () {
     var inventory_id = $(this).data('id'); // Get the ID of the row
     var ref_num = $(this).data('ref-num'); // Get the ref_num of the row
     // $username = session()->get('username'); 
-    var username = "<?php echo session()->get('username'); ?>";
+    var last_name = "<?php echo session()->get('last_name'); ?>";
+    var first_name = "<?php echo session()->get('first_name'); ?>";
+    var fullname= `${first_name}  ${last_name}`;
     // Redirect to the exportPDF function with both inventory_id and ref_num as URL parameters
-    window.location.href = '<?= base_url('inventory/exportPDF/') ?>' + inventory_id + '/' + ref_num + '/' + username;
+    // console.log(last_name);
+    window.location.href = '<?= base_url('inventory/exportPDF/') ?>' + inventory_id + '/' + ref_num + '/' + fullname;
 });
 
 
